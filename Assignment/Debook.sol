@@ -7,7 +7,6 @@ contract Debook{
     address[] authors; 
     mapping(uint => string) content;
     uint size;
-    uint authorsNumber;
 
     function createPage(uint _pageNumber, string memory _content) public{
         require(keccak256(abi.encodePacked(content[_pageNumber])) == keccak256(abi.encodePacked("")));
